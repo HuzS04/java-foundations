@@ -2,10 +2,14 @@ package week2;
 
 public class Main {
     public static void main(String[] args){
-        Person person1 = new Person("Huzaifah", 21, "Developer");
-        person1.setOccupation("Engineer");
-        System.out.println(person1.getName());
-        System.out.println(person1.getOccupation());
-        person1.setAge(-21);
+        Animal animal = new Animal("Generic Animal", 7);
+        Dog dog = new Dog("Bob", 6);
+        Cat cat = new Cat("John", 5);
+        animal.eat();
+        dog.eat();
+        cat.eat();
+        dog.sleep();
+        dog.bark();
+        cat.meow();
     }
 }
