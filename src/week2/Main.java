@@ -2,14 +2,22 @@ package week2;
 
 public class Main {
     public static void main(String[] args){
-        Animal animal = new Animal("Generic Animal", 7);
-        Dog dog = new Dog("Bob", 6);
-        Cat cat = new Cat("John", 5);
-        animal.eat();
-        dog.eat();
-        cat.eat();
-        dog.sleep();
-        dog.bark();
-        cat.meow();
+        Animal[] animals = {
+                new Dog("Rex", 3),
+                new Cat("Whiskers", 4),
+                new Animal("Generic", 5),
+                new Bird("Feathers", 4)
+        };
+
+        for (Animal animal : animals){
+            animal.eat();
+            if(animal instanceof Dog){
+                Dog dog = (Dog) animal;
+                dog.bark();
+            } else if (animal instanceof Bird) {
+                Bird bird = (Bird) animal;
+                bird.fly();
+            }
+        }
     }
 }
