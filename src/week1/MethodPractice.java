@@ -1,3 +1,5 @@
+package week1;
+
 public class MethodPractice {
 
     public static boolean isEven(int value){

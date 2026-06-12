@@ -1,3 +1,5 @@
+package week1;
+
 public class Assessment {
     public static int countEvens(int[] numbers){
         int count = 0;

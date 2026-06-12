@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package week1;
 
 public class LoopPractice {
     public static void main(String[] args){
