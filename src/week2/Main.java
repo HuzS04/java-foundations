@@ -2,14 +2,23 @@ package week2;
 
 public class Main {
     public static void main(String[] args){
-        Animal animal = new Animal("Generic Animal", 7);
-        Dog dog = new Dog("Bob", 6);
-        Cat cat = new Cat("John", 5);
-        animal.eat();
-        dog.eat();
-        cat.eat();
-        dog.sleep();
-        dog.bark();
-        cat.meow();
+        BankAccount bankAccount = new BankAccount("Dave", 500.50);
+
+        System.out.println(bankAccount.getBalance());
+        bankAccount.deposit(100);
+        System.out.println(bankAccount.getBalance());
+        bankAccount.deposit(0);
+
+        bankAccount.withdraw(200);
+        System.out.println(bankAccount.getBalance());
+        bankAccount.withdraw(500);
+
+        ElectricCar electricCar = new ElectricCar("Tesla");
+        PetrolCar petrolCar = new PetrolCar("Toyota");
+        Vehicle[] vehicles = {electricCar, petrolCar};
+
+        for(Vehicle vehicle : vehicles){
+            vehicle.printInfo();
+        }
     }
 }
