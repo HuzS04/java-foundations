@@ -2,19 +2,23 @@ package week2;
 
 public class Main {
     public static void main(String[] args){
-        int[] grades1 = {23, 46, 43, 57, 97};
-        int[] grades2 = {46, 12, 67, 32, 68};
-        int[] grades3 = {38, 94, 27, 47, 35};
-        Student student1 = new Student("Bob", 21, grades1);
-        Student student2 = new Student("John", 20, grades2);
-        Student student3 = new Student("Mike", 22, grades3);
+        BankAccount bankAccount = new BankAccount("Dave", 500.50);
 
-        Student[] students = {student1, student2, student3};
-        GradeBook gradeBook = new GradeBook(students);
+        System.out.println(bankAccount.getBalance());
+        bankAccount.deposit(100);
+        System.out.println(bankAccount.getBalance());
+        bankAccount.deposit(0);
 
-        gradeBook.printAllReports();
+        bankAccount.withdraw(200);
+        System.out.println(bankAccount.getBalance());
+        bankAccount.withdraw(500);
 
-        Student top = gradeBook.getTopStudent();
-        System.out.println("Top student: " + top.name + " with average " + top.calculateAverage());
+        ElectricCar electricCar = new ElectricCar("Tesla");
+        PetrolCar petrolCar = new PetrolCar("Toyota");
+        Vehicle[] vehicles = {electricCar, petrolCar};
+
+        for(Vehicle vehicle : vehicles){
+            vehicle.printInfo();
+        }
     }
 }
