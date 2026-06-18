@@ -13,6 +13,10 @@ public class Student extends SystemPerson implements Printable{
         return "Student";
     }
 
+    public String getName(){
+        return name;
+    }
+
     public double calculateAverage(){
         int length = grades.length;
         int sum = 0;
