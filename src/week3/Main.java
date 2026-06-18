@@ -5,19 +5,16 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args){
-        List<String> foods = new ArrayList<>();
+        List<String> words = new ArrayList<>();
 
-        foods.add("Pizza");
-        foods.add("Burger");
-        foods.add("Pasta");
-        foods.add("Pie");
-        foods.add("Chips");
+        words.add("Bob");
+        words.add("Car");
+        words.add("Bob");
+        words.add("Shop");
+        words.add("Cat");
+        words.add("Shop");
+        words.add("Bob");
 
-        for (String food : foods) {
-            System.out.println(food);
-        }
-
-        System.out.println("Longest food: " + ListPractice.findLongest(foods));
-        ListPractice.removeShortWords(foods);
+        System.out.println(SetMapPractice.countWordFrequency(words));
     }
 }
