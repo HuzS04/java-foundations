@@ -1,0 +1,3 @@
+Bob - Student - 41.4
+Dave - Student - 44.6
+Jon - Student - 59.2

@@ -1,21 +1,22 @@
 package week3;
 
-import week2.BankAccount;
-
-import java.util.ArrayList;
-import java.util.List;
+import week2.GradeBook;
+import week2.Student;
 
 public class Main {
     public static void main(String[] args){
-        BankAccount bankAccount = new BankAccount("Dave", 100);
+        Student student1 = new Student("Bob", 21, new int[]{12, 43, 64, 23, 65});
+        Student student2 = new Student("Dave", 23, new int[]{32, 63, 12, 76, 40});
+        Student student3 = new Student("Jon", 22, new int[]{42, 67, 32, 58, 97});
 
-        System.out.println(ExceptionPractice.safeDivide(4, 0));
-        System.out.println(ExceptionPractice.getElement(new int[]{1, 2, 4, 5, 5}, 7));
+        Student[] students = {student1, student2, student3};
 
-        try{
-            bankAccount.withdraw(-20);
-        } catch (IllegalArgumentException e){
-            System.out.println("Withdrawal failed: " + e.getMessage());
-        }
+        GradeBook gradeBook = new GradeBook(students);
+
+        FilePractice.saveStudentReport(student1);
+
+        FilePractice.readReport();
+
+        gradeBook.saveAllReports();
     }
 }
