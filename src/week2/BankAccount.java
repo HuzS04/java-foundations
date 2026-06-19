@@ -19,9 +19,9 @@ public class BankAccount {
 
     public void withdraw(double amount) {
         if (amount <= 0) {
-            System.out.println("Please enter a valid amount to withdraw");
+            throw new IllegalArgumentException("Please enter a valid amount to withdraw");
         } else if (amount > balance) {
-            System.out.println("Insufficient funds");
+            throw new IllegalArgumentException("Insufficient funds");
         } else {
             balance -= amount;
         }

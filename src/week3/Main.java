@@ -1,20 +1,21 @@
 package week3;
 
+import week2.BankAccount;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args){
-        List<String> words = new ArrayList<>();
+        BankAccount bankAccount = new BankAccount("Dave", 100);
 
-        words.add("Bob");
-        words.add("Car");
-        words.add("Bob");
-        words.add("Shop");
-        words.add("Cat");
-        words.add("Shop");
-        words.add("Bob");
+        System.out.println(ExceptionPractice.safeDivide(4, 0));
+        System.out.println(ExceptionPractice.getElement(new int[]{1, 2, 4, 5, 5}, 7));
 
-        System.out.println(SetMapPractice.countWordFrequency(words));
+        try{
+            bankAccount.withdraw(-20);
+        } catch (IllegalArgumentException e){
+            System.out.println("Withdrawal failed: " + e.getMessage());
+        }
     }
 }
